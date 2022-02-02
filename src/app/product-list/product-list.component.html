@@ -3,7 +3,10 @@
 <!-- *ngFor repeats the div for each product in the list -->
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' details'">
+    <a
+      [title]="product.name + 'details'"
+      [routerLink]="['/products', product.id]"
+    >
       <!-- {{}} renders property value as text -->
       {{ product.name }}
     </a>
